@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { TypeAnimation } from 'react-type-animation';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ <TypeAnimation
+                className='fs-1 fw-bolder mb-2 home__title-color'
+                sequence={[
+                  'Hello', 1000, 'world', 2000, 'Hello world', ()=>{
+                    console.log('Abishkar rai')
+                  }
+                ]}
+                wrapper="dev"
+            cursor={true}
+            repeat={Infinity}
+             style={{ fontSize: '3em' }}
+                />
+   
     </div>
   );
 }
